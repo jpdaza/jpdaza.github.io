@@ -67,6 +67,22 @@
   .hint a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);}
   .hint a:hover{color:var(--cream);}
 
+  /* ---- demo video (below the slide) ---- */
+  .demo{width:100%;max-width:1180px;margin:0 auto;}
+  .demo .cap{
+    display:flex;align-items:center;gap:.7em;margin-bottom:10px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted2);
+  }
+  .demo .cap::before{content:"";flex:0 0 22px;height:1px;background:var(--cardinal);}
+  .demo .cap b{color:var(--cardinal);font-weight:600;}
+  .demo .vidframe{
+    border-radius:8px;overflow:hidden;line-height:0;
+    box-shadow:0 18px 60px rgba(0,0,0,.55), 0 0 0 1px var(--line);
+    background:#000;
+  }
+  .demo video{width:100%;height:auto;display:block;}
+
   /* ---- footer ---- */
   footer{
     display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
@@ -106,6 +122,15 @@
         </a>
       </div>
       <p class="hint">Tap the slide to open <a href="summary-hires.png">full resolution</a> · pinch to zoom</p>
+
+      <div class="demo">
+        <div class="cap"><b>Demo</b> · MacPass "Tom" · ∞ models, same data</div>
+        <div class="vidframe">
+          <video src="demo.mp4" autoplay loop muted playsinline controls preload="metadata"
+                 poster="demo-poster.jpg" aria-label="Animated demo: ensemble of equally-valid 3D geologic models">
+          </video>
+        </div>
+      </div>
     </div>
   </main>
 
